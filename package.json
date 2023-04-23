@@ -2,7 +2,7 @@
   "name": "vscode-language-fsh",
   "displayName": "FHIR Shorthand",
   "description": "FHIR Shorthand (FSH) Language Support by MITRE",
-  "version": "1.10.2",
+  "version": "1.10.2-StueyNZ",
   "author": "The MITRE Corporation",
   "license": "Apache-2.0",
   "publisher": "MITRE-Health",
@@ -84,6 +84,22 @@
             "line": 1
           }
         ]
+      },
+      {
+        "owner": "vscode-language-fsh-fhirValidator",
+        "name": "fhirValidator",
+        "fileLocation": "absolute",
+        "pattern": [
+          {
+            "regexp": "^(\\S+): line ?(\\d+), col ?(\\d+), ((?:Info|Warning|Error)) - (.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5,
+            "loop": true
+          }
+        ]
       }
     ],
     "taskDefinitions": [
@@ -140,6 +156,7 @@
   "dependencies": {
     "antlr4": "~4.8.0",
     "axios": "^0.21.4",
+    "vsce": "^1.97.0",
     "yaml": "^1.10.2"
   }
 }
