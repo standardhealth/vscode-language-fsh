@@ -144,6 +144,12 @@ The files to copy are:
 - FSHParser.js
 - FSHVisitor.js
 
+# Conversion from FHIR Json to FSH and from FSH to FHIR Json
+
+Right clicking on a .FSH file and then select the opteion "FSH to FHIR JSON" from the context menu will convert this FSH file to a FHIR JSON file. The FHIR JSON file will be created in memory in a separate file tab.
+
+Right clicking on a JSON file that contains a FHIR resource and then select the opteion "FHIR to FSH" from the context menu will convert this JSON FHIR file to a FSH file. The FSH file will be created in memory in a separate file tab.
+
 # License
 
 Copyright 2019-2024 Health Level Seven International
