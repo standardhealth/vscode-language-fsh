@@ -163,7 +163,7 @@
   },
   "dependencies": {
     "antlr4": "~4.13.2",
-    "axios": "^1.7.7",
+    "axios": "^1.13.5",
     "fsh-sushi": "^3.16.3",
     "gofsh": "^2.5.1",
     "semver": "^7.7.2",
