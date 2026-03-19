@@ -96,7 +96,7 @@
         },
         {
           "name": "keyword.reserved.fsh",
-          "match": "\\b(?<=\\s|^)(and|codes|contains|descendent-of|exclude|exists|generalizes|include|in|is-a|is-not-a|named|not-in|or|regex|(?<=\\bfrom\\s*)system|units|valueset|where|D|MS|N|SU|TU|\\?!)(?=\\s)\\b"
+          "match": "\\b(?<=\\s|^)(and|codes|contains|descendent-of|exclude|exists|generalizes|include|in|is-a|is-not-a|named|not-in|or|regex|system|units|valueset|where|D|MS|N|SU|TU|\\?!)(?=\\s|$)"
         },
         {
           "match": "\\b(?<=\\s|^)(from|obeys)\\s+(\\S+)((\\s+and\\s+(\\S+))*)",
@@ -149,7 +149,7 @@
           "patterns": [
             {
               "name": "string.quoted.other.bracketed.fsh",
-              "begin": "(?<=[^\\\\][,\\(]\\s*)\\[\\[",
+              "begin": "(?<=[,\\(])\\s*\\[\\[",
               "end": "\\]\\](?=\\s*[,)])"
             },
             {
@@ -231,7 +231,7 @@
       "patterns": [
         {
           "name": "constant.numeric.fsh",
-          "match": "\\b(?<=\\s|^)(true|false)(?=\\s)\\b"
+          "match": "\\b(?<=\\s|^)(true|false)(?=\\s|$)"
         }
       ]
     },
@@ -239,11 +239,11 @@
       "patterns": [
         {
           "name": "constant.numeric.fsh",
-          "match": "\\b(?<=[\\s,]|^)(-?\\d+(\\.\\d+)?)(?=[\\s,])\\b"
+          "match": "\\b(?<=[\\s,]|^)(-?\\d+(\\.\\d+)?)(?=[\\s,]|$)"
         },
         {
           "name": "constant.numeric.fsh",
-          "match": "\\b(\\d*\\.\\.(\\d+|\\*)?)\\b"
+          "match": "\\b(\\d*\\.\\.(\\d+|\\*)?)(?=\\s|$)"
         }
       ]
     },
